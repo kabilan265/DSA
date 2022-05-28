@@ -1,0 +1,18 @@
+function fun(arr) {
+  let first = arr[0];
+  let second = arr[1];
+  if (first < second) {
+    first = arr[1];
+    second = arr[0];
+  }
+  for (var i = 2; i < arr.length; i++) {
+    if (first < arr[i]) {
+      second = first;
+      first = arr[i];
+    } else if (second < arr[i]) {
+      second = arr[i];
+    }
+  }
+  return (first===second)?-1:arr.indexOf(second);
+}
+console.log(fun([10,10,10]));

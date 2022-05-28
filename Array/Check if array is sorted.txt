@@ -1,0 +1,14 @@
+function fun(a) {
+  for(var i=1;i<a.length;i++)
+  {
+      if(a[i]<a[i-1])
+      {
+          return false
+      }
+  }
+  return true;
+}
+console.log(fun([10, 20, 15]));
+console.log(fun([8, 12, 15]));
+console.log(fun([100]));
+console.log(fun([100, 20, 200]));
